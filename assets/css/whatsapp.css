@@ -1,0 +1,12 @@
+.wa-fab{position:fixed;right:20px;bottom:20px;z-index:70;display:flex;align-items:center;flex-direction:row-reverse;gap:.6rem;text-decoration:none}
+.wa-ic{position:relative;width:58px;height:58px;border-radius:50%;background:linear-gradient(145deg,#4a6580,var(--sl));display:grid;place-items:center;box-shadow:0 10px 26px -8px rgba(52,74,94,.75),inset 0 0 0 2px rgba(168,184,162,.55);animation:wa-b 3.2s ease-in-out infinite;transition:transform .3s}
+.wa-ic svg{width:30px;height:30px;fill:var(--iv)}
+.wa-ic:before,.wa-ic:after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--sg);animation:wa-p 2.4s ease-out infinite}.wa-ic:after{animation-delay:1.2s}
+.wa-tip{background:var(--wh);color:var(--sl);border:1px solid var(--tp);border-radius:999px;padding:.45rem .95rem;font:600 .88rem Figtree,sans-serif;box-shadow:0 8px 20px -12px rgba(52,74,94,.6);opacity:0;transform:translateX(10px);pointer-events:none;transition:.3s;white-space:nowrap}
+.wa-fab:hover .wa-tip,.wa-fab:focus-visible .wa-tip{opacity:1;transform:none}
+.wa-fab:hover .wa-ic{transform:scale(1.08) rotate(-6deg)}
+@keyframes wa-b{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes wa-p{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.65);opacity:0}}
+@media(max-width:600px){.wa-fab{right:14px;bottom:14px}.wa-ic{width:52px;height:52px}.wa-tip{display:none}}
+@media print{.wa-fab{display:none}}
+@media(prefers-reduced-motion:reduce){.wa-ic,.wa-ic:before,.wa-ic:after{animation:none}}
